@@ -30,6 +30,7 @@ jobs:
           channel: 'stable'
       - run: flutter pub get
       - run: flutter test
+      - run: pod install
       - run: flutter build ios --release --no-codesign
 
   build-and-test-web:
