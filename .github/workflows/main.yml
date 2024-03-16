@@ -28,9 +28,11 @@ jobs:
         with:
           flutter-version: '3.19.3'
           channel: 'stable'
+      - run: cd ios
       - run: flutter pub get
       - run: flutter test
       - run: pod install
+      - run: pod update
       - run: flutter build ios --release --no-codesign
 
   build-and-test-web:
